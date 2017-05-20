@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="새 게시물 알림 서비스">
+        <SwitchPreference
+            android:key="autoUpdate"
+            android:title="새 게시물 알림 서비스"
+            android:summaryOn="서비스 ON"
+            android:summaryOff="서비스 OFF"
+            android:switchTextOff="OFF"
+            android:switchTextOn="ON"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="select_noticeRefresh"
+            android:title="공지사항"
+            android:summary="공지사항만 알림 서비스를 합니다."
+            android:summaryOn="서비스가 실행중입니다."
+            android:dependency="autoUpdate"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="select_freeboardRefresh"
+            android:title="자유게시판"
+            android:summary="자유게시판만 알림 서비스를 합니다."
+            android:summaryOn="서비스가 실행중입니다."
+            android:dependency="autoUpdate"
+            android:defaultValue="false"/>
+        <CheckBoxPreference
+            android:key="select_allRefresh"
+            android:title="공지사항 및 자유게시판"
+            android:summary="공지사항과 자유게시판의 알림 서비스를 합니다."
+            android:summaryOn="서비스가 실행중입니다."
+            android:dependency="autoUpdate"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

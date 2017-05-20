@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:demoapp= "http://schemas.android.com/apk/res/com.hnkim.cseboard"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        app:backgroundTint="#d6d6d6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/ic_vertical_align_top_black_24dp"/>
+
+    <LinearLayout
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        tools:context="com.hnkim.cseboard.MainNotice"
+        android:layout_gravity="right"
+        android:orientation="vertical"
+        android:background="#ededed"
+        android:onClick="linearOnClick">
+
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:hint="검색할 게시물의 제목/작성자를 입력하세요"
+                android:backgroundTint="@android:color/darker_gray"
+                android:textSize="12dp"/>
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <ToggleButton
+                    android:id="@+id/tb"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:textOff="공지표시"
+                    android:textOn="공지표시"
+                    android:textColor="#FFFFFF"
+                    android:textSize="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/notify"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp" />
+
+
+
+        <com.hnkim.cseboard.CustomFastScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            demoapp:overlayWidth="225dp"
+            demoapp:overlayHeight="110dp"
+            demoapp:overlayTextSize="36dp"
+            demoapp:overlayScrollThumbWidth="60dp"
+            android:id="@+id/fast_scroll_view">
+            <ListView
+                android:id="@+id/noticeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#ededed"
+                android:dividerHeight="0px"
+                android:textFilterEnabled="true"
+                android:layout_below="@+id/space2"/>
+        </com.hnkim.cseboard.CustomFastScrollView>
+
+
+        <com.hnkim.cseboard.CustomFastScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            demoapp:overlayWidth="225dp"
+            demoapp:overlayHeight="110dp"
+            demoapp:overlayTextSize="36dp"
+            demoapp:overlayScrollThumbWidth="60dp"
+            android:id="@+id/fast_scroll_view2">
+            <ListView
+                android:id="@+id/numberList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#ededed"
+                android:dividerHeight="0px"
+                android:textFilterEnabled="true"
+                android:layout_below="@+id/noticeList">
+            </ListView>
+
+        </com.hnkim.cseboard.CustomFastScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="selectServices">
+        <item>선택안함</item>
+        <item>공지사항</item>
+        <item>자유게시판</item>
+        <item>공지사항+자유게시판</item>
+    </string-array>
+
+    <string-array name="selectServices_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>

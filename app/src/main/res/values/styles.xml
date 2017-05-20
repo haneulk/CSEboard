@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="HaneulStyle" parent="Theme.AppCompat.Light.DarkActionBar" >
+        <item name="android:windowIsFloating">@color/colorFloating</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/colorFloating</item>
+        <item name="android:textColorSecondary">@color/colorFloating</item>
+    </style>
+
+    <style name="MainTheme" parent="Theme.AppCompat.NoActionBar">
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+    </style>
+
+    <style name="SkyTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:icon">@drawable/logo3</item>
+        <item name="icon">@drawable/logo3</item>
+    </style>
+
+    <style name="SkyTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:displayOptions">homeAsUp|showHome|showTitle</item>
+        <item name="displayOptions">homeAsUp|showHome|showTitle</item>
+    </style>
+
+</resources>

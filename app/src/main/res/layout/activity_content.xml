@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/ctitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        android:textColor="#000000"
+        android:textSize="30dp"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <LinearLayout
+        android:id="@+id/cLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cwriter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="writer"/>
+        <Space
+            android:layout_width="13dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/cdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"/>
+        <Space
+            android:layout_width="13dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/cview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="view"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <ListView
+        android:id="@+id/contentList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cLL"/>
+
+</LinearLayout>

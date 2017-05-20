@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hnkim.cseboard">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo2"
+        android:label="CSEboard"
+        android:supportsRtl="true"
+        android:noHistory="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.hnkim.cseboard.MainActivity"
+            android:theme="@style/MainTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Splash" android:theme="@style/SplashTheme"></activity>
+        <activity
+            android:name=".MainNotice"
+            android:label="공지사항"
+            android:icon="@drawable/logo3"
+            android:theme="@style/SkyTheme"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".MainFreeboard"
+            android:label="자유게시판"
+            android:windowSoftInputMode="stateHidden"
+            android:icon="@drawable/logo3"
+            android:theme="@style/SkyTheme">
+        </activity>
+
+        <activity android:name=".WebViewContent" android:label=""></activity>
+        <activity android:name=".SettingsActivity" android:label="설정"></activity>
+        <service android:name=".ServiceNotice"></service>
+        <service android:name=".ServiceFreeboard"></service>
+        <service android:name=".ServiceAll"></service>
+
+    </application>
+
+</manifest>
